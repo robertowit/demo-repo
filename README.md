@@ -100,12 +100,26 @@ Git BRANCHING
 
 1) Check on which branch you are (in demo: *main), create a branch with name -b "feature-11" (or "bugfix-1245") and further description etc...
     $ git branch
-        > shows you *main branch marked
+        > shows you *main branch marked ("main" = former "master")
     $ git checkout -b demoBranch-1
         > creates new branch
     $ git branch
         > shows new active branch marked with star *demoBranch-1
-    
+    $ git checkout -b main
+        > switches to main again
+    $ git branch
+        > show you're active on main branch
 
+    // Auto-Fill command / field is possible with TAB if you do not want to write the whole branch name or command    
+    $ git checkout -b demoBranch-1
 
+2) Make some changes in the project in new branch, git status + add to stage and commit them
 
+ ... now make some changes... for example in README.me
+
+ ... git status
+ ... git add .
+ ... git commit -m "Updated readme, training"
+ 
+3) Change to main branch, merge
+3.1) 
