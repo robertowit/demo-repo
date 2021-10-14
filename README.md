@@ -164,3 +164,10 @@ A) Visually Pull-Request via GitHub
 
 /// BUT NOW - WHAT HAPPEN's WITH MERGE CONFLICTS ?? ///
 
+>> stash them
+
+example:
+- new main index.html change
+- 'your new branch' "testBranch-1" containing changes in index.html
+-> conflict
+-> stash them by merging changes from main to 'your new branch' (update changes before adding yours via merge into new branch), then comparison of changes manually in editors and rest same way as before  
