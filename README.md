@@ -22,6 +22,7 @@ This is an intro to install Git & GitHub on Macbook Air 13" M1 (11/2020+), on Wi
             depending on OS
             * for Windows:          $ git config --global core.autocrlf true
             * For Mac and Linux:    $ git config --global core.autocrlf input
+    - if Visual Studio Code was already installed: use Administrator rights when starting shortcut VS Code (properties > adv. > admin...)
 
 1) On GitHub
 -------------------
@@ -30,7 +31,7 @@ This is an intro to install Git & GitHub on Macbook Air 13" M1 (11/2020+), on Wi
 
 2) Git in Visual Studio Code (or other Git editor like VIM, Notepad++):
 ------------------- 
-1.1) in Visual Studio Code: open repository containing folder "demo-repo" 
+2.1) in Visual Studio Code: open repository containing folder "demo-repo" 
 2.2) Created index.html just for test-purpose, made some changes in README.md (for training git status, commit, push, SSHkey, https auth ...)
 2.3) SSH key generation: see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent (14.10.21)
     - Open Git Bash & command:
@@ -93,4 +94,62 @@ But what about creating a repo locally and pushing it to GitHub?
 
 That's it, you just created a local repo and pushed it to the remote target
 
+
+Git BRANCHING 
+----------------------------------------------------------
+
+1) Check on which branch you are (in demo: *main), create a branch with name -b "feature-11" (or "bugfix-1245") and further description etc...
+    $ git branch
+        > shows you *main branch marked ("main" = former "master")
+    $ git checkout -b demoBranch-1
+        > creates new branch
+    $ git branch
+        > shows new active branch marked with star *demoBranch-1
+    $ git checkout -b main
+        > switches to main again
+    $ git branch
+        > show you're active on main branch
+
+    // Auto-Fill command / field is possible with TAB if you do not want to write the whole branch name or command    
+    $ git checkout -b demoBranch-1
+
+2) Make some changes in the project in new branch, git status + add to stage and commit them
+
+ ... now make some changes... for example in README.me
+
+ ... git status
+ ... git add .
+ ... git commit -m "Updated readme, training"
+ 
+3) Change to main branch, merge
+3.1) Switch to main branch -> **main, show diffs to new branch "demoBranch-1"
+    $ git checkout main
+    $ git branch
+        > check if you're on main branch, *main should be marked
+    $ git diff demoBranch-1
+        > output shows diffs from main vs. new
+    ... now we could call    $ git merge demoBranch-1   ... to merge new branch to main, but common pattern is to push branch to GitHub and Pull-Request afterwards... 
+    (PR = Pull-Request is common practice for questions, checks, ... about changes) 
+3.2) switch back to NEW branch, git status, add ., commit
+    $ git checkout demoBranch-1
+    $ git branch
+        > make sure you're on new branch
+    $ git status
+    $ git commit -m "README.md updated, optimized guideline, new branch training"
+    $ git push -u origin demoBranch-1
+        > ... 100 % ... done ... 
+3.3) You can now visually pull-request (PR) or per terminal.... 
+A) Visually Pull-Request via GitHub
+    
+    - Go to GitHub webpage > your demo-repo ... new Button "Compare & pull request" came up  (at 44:51 in https://www.youtube.com/watch?v=RGOj5yH7evk, 14.10.21.),
+    ... shows from which to which branch merge will be done...
+    ... create a list of made changes ... (history log in Git as commmon practice)
+    ... check comments, changes in commits...
+    
+    - Click Button "Merge pull request"
+
+    - in VS Code you need to pull in main branch the changes 
+    VS Code > Terminal > switch to main branch, commands:
+        $ git checkout main
+        $ git pull
 
