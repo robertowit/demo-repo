@@ -153,3 +153,14 @@ A) Visually Pull-Request via GitHub
         $ git checkout main
         $ git pull
 
+        .... if successfully pulled and changes ok > delete branch in GitHub and locally in Git
+
+        - in GitHub, in repo section "Pull request successfully merged and and closed: button Button DeleteBranch
+
+        - in Git: delete already merged branches (common practice, clean up)
+            $ git branch -d demoBranch-1
+            $ git branch
+                > output should now show only the main branch ... great! :) 
+
+/// BUT NOW - WHAT HAPPEN's WITH MERGE CONFLICTS ?? ///
+
