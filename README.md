@@ -122,4 +122,34 @@ Git BRANCHING
  ... git commit -m "Updated readme, training"
  
 3) Change to main branch, merge
-3.1) 
+3.1) Switch to main branch -> **main, show diffs to new branch "demoBranch-1"
+    $ git checkout main
+    $ git branch
+        > check if you're on main branch, *main should be marked
+    $ git diff demoBranch-1
+        > output shows diffs from main vs. new
+    ... now we could call    $ git merge demoBranch-1   ... to merge new branch to main, but common pattern is to push branch to GitHub and Pull-Request afterwards... 
+    (PR = Pull-Request is common practice for questions, checks, ... about changes) 
+3.2) switch back to NEW branch, git status, add ., commit
+    $ git checkout demoBranch-1
+    $ git branch
+        > make sure you're on new branch
+    $ git status
+    $ git commit -m "README.md updated, optimized guideline, new branch training"
+    $ git push -u origin demoBranch-1
+        > ... 100 % ... done ... 
+3.3) You can now visually pull-request (PR) or per terminal.... 
+A) Visually Pull-Request via GitHub
+    
+    - Go to GitHub webpage > your demo-repo ... new Button "Compare & pull request" came up  (at 44:51 in https://www.youtube.com/watch?v=RGOj5yH7evk, 14.10.21.),
+    ... shows from which to which branch merge will be done...
+    ... create a list of made changes ... (history log in Git as commmon practice)
+    ... check comments, changes in commits...
+    
+    - Click Button "Merge pull request"
+
+    - in VS Code you need to pull in main branch the changes 
+    VS Code > Terminal > switch to main branch, commands:
+        $ git checkout main
+        $ git pull
+
