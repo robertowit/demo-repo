@@ -3,3 +3,5 @@
 This is some plain text - this is a first edit. A commit update information will be added and the commit can be traced (created, updated ...) 
 
 test
+
+this is some more message
