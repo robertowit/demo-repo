@@ -171,3 +171,23 @@ example:
 - 'your new branch' "testBranch-1" containing changes in index.html
 -> conflict
 -> stash them by merging changes from main to 'your new branch' (update changes before adding yours via merge into new branch), then comparison of changes manually in editors and rest same way as before  
+
+... some more edit in index.html in branches main / testBranch-1 (via: git branch >> git ceckout main/diffBranch-1 >> git branch)
+
+if in new branch for example testBranch-1 
+    $ git merge main
+    > ... outputs conflict... merge conflict ... check files... if configured as described above, use VS code to accept new/old changes ... merge then respecitvely... 
+
+    ... after status, add . (or specific folder, file), commit -m "solved merge conflict ...., reason... "...) ...
+
+    ... check GitHub for update, merge via button "Compare pull request", "Confirm..." etc. via git hub
+
+    ... Delete branch (on GitHub)
+
+    ... back in Terminal (locally on Git / Visual Studio Code >> Terminal >> repo folder)
+    $ git checkout main
+    $ git branch
+        > check if in main branch 
+    $ git pull newly updated changes are now also locally updated via pull
+
+    
