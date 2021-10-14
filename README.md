@@ -22,6 +22,7 @@ This is an intro to install Git & GitHub on Macbook Air 13" M1 (11/2020+), on Wi
             depending on OS
             * for Windows:          $ git config --global core.autocrlf true
             * For Mac and Linux:    $ git config --global core.autocrlf input
+    - if Visual Studio Code was already installed: use Administrator rights when starting shortcut VS Code (properties > adv. > admin...)
 
 1) On GitHub
 -------------------
@@ -30,7 +31,7 @@ This is an intro to install Git & GitHub on Macbook Air 13" M1 (11/2020+), on Wi
 
 2) Git in Visual Studio Code (or other Git editor like VIM, Notepad++):
 ------------------- 
-1.1) in Visual Studio Code: open repository containing folder "demo-repo" 
+2.1) in Visual Studio Code: open repository containing folder "demo-repo" 
 2.2) Created index.html just for test-purpose, made some changes in README.md (for training git status, commit, push, SSHkey, https auth ...)
 2.3) SSH key generation: see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent (14.10.21)
     - Open Git Bash & command:
@@ -92,5 +93,19 @@ But what about creating a repo locally and pushing it to GitHub?
         > outputs: ... 100 % ... done
 
 That's it, you just created a local repo and pushed it to the remote target
+
+
+Git BRANCHING 
+----------------------------------------------------------
+
+1) Check on which branch you are (in demo: *main), create a branch with name -b "feature-11" (or "bugfix-1245") and further description etc...
+    $ git branch
+        > shows you *main branch marked
+    $ git checkout -b demoBranch-1
+        > creates new branch
+    $ git branch
+        > shows new active branch marked with star *demoBranch-1
+    
+
 
 
