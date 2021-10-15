@@ -189,5 +189,26 @@ if in new branch for example testBranch-1
     $ git branch
         > check if in main branch 
     $ git pull newly updated changes are now also locally updated via pull
-
+    ..
     
+...
+
+
+
+UNDOING GIT
+------------------------------------------
+
+Undo an add . = unstage:
+    $ git reset (optionally <Folder/Filename   if used in staging via add>)
+
+
+Undo last commit:
+    $ git reset HEAD~1 (optionally <Folder/Filename)
+
+        // HEAD points to last commit. If we want to undo it, "~1" after HEAD refers to the commit before to which we go back. 
+
+    $ git log
+        > shows a list of all commits in reverse chronological order with a hash as a reference. 
+
+If we want to undo until specific commit, use the hash from the commit log:
+    $ 
