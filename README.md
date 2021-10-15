@@ -217,3 +217,16 @@ If we want to undo until specific commit, use the hash from the commit log:
   ... or a hard change removal ...
     $ git reset --hard <hash from a previous git log commit>
         > erases latest updates!
+
+
+
+FORKING
+---------------------------
+see tutorial by freeCodeCamp.org: 
+https://www.youtube.com/watch?v=RGOj5yH7evk&t=3710s (1:01:50) 
+
+Forking in git creates a complete copy that can be changed for own purpose (~licenses to consider) or to participate in projects and extend them via pull-request and a request for the changes to be added.
+
+To create your own copy:
+- In GitHub >> on top right corner Button Fork >> click your user (or group) >> creates complete copy with all branches ... 
+- now branching etc. can be used, change in new branches made, merged into main etc...
