@@ -202,7 +202,7 @@ Undo an add . = unstage:
     $ git reset (optionally <Folder/Filename   if used in staging via add>)
 
 
-Undo last commit:
+Undo last commit (same with HEAD~1 or hash to unstage changes):
     $ git reset HEAD~1 (optionally <Folder/Filename)
 
         // HEAD points to last commit. If we want to undo it, "~1" after HEAD refers to the commit before to which we go back. 
@@ -211,4 +211,9 @@ Undo last commit:
         > shows a list of all commits in reverse chronological order with a hash as a reference. 
 
 If we want to undo until specific commit, use the hash from the commit log:
-    $ 
+    $ git reset <hash from a previous git log commit> 
+        > unstages until this last commit
+
+  ... or a hard change removal ...
+    $ git reset --hard <hash from a previous git log commit>
+        > erases latest updates!
